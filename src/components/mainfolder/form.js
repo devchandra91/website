@@ -49,7 +49,7 @@ export default class Form extends React.Component {
                      text-green-700 text-xl  font-medium
                     grid justify-center justify-self-center"
           >
-            -[ WE'RE HIRING ]-
+            -[ Responsive Form ]-
           </h2>
           <h3
             className="mx-auto mb-4 px-4 text-green-600 pb-2 text-lg font-semibold
