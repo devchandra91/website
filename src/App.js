@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { React } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 
-function App() {
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
+import Services from "./components/services";
+import ContactUs from "./components/contact-us";
+import Home from "./components/mainfolder/home";
+import Layout from "./components/Layout";
+
+export default function App() {
+  let location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Layout>
+        <TransitionGroup>
+          <CSSTransition key={location.key} classNames="fade" timeout={300}>
+            <Switch location={location}>
+              <Route path="/services">
+                <Services />
+              </Route>
+              <Route path="/contact-us">
+                <ContactUs />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+      </Layout>
     </div>
   );
 }
-
-export default App;

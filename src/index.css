@@ -1,13 +1,102 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  li {
+    @apply text-center;
+  }
+  a {
+    @apply hover:text-green-700 transition duration-300 ease-in-out;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .btn {
+    @apply outline-none py-2 px-14 rounded-full bg-green-600 
+         text-white tracking-widest hover:bg-green-500
+          transition duration-200 shadow-xl active:shadow-inner;
+  }
+
+  .border-animation:focus {
+    animation-name: border-glow;
+    animation-duration: 150ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes border-glow {
+    0% {
+      border-color: #fb923c;
+    }
+    20% {
+      border-color: #fb923c #22c55e #22c55e #22c55e;
+    }
+    40% {
+      border-color: #fb923c #fb923c #22c55e #22c55e;
+    }
+    60% {
+      border-color: #fb923c #fb923c #fb923c #22c55e;
+    }
+    80% {
+      border-color: #fb923c #fb923c #fb923c #fb923c;
+    }
+    100% {
+      border-color: #22c55e;
+    }
+  }
+
+  .blink {
+    animation-name: blink;
+    animation-duration: 1000ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      color: #fb923c;
+      border-color: #22c55e;
+    }
+    50% {
+      color: #22c55e;
+      border-color: #fb923c;
+    }
+    100% {
+      color: #fb923c;
+      border-color: #22c55e;
+    }
+  }
+
+  .active {
+    color: #fb923c;
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-enter-active {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+  }
+  .fade-enter-active,
+  .fade-exit-active {
+    transition: opacity 500ms;
+  }
 }
