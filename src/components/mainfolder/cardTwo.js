@@ -4,22 +4,22 @@ import testerImg from "../../Assets/card-two-img.jpg";
 const cardData = [
   {
     id: 0,
-    heading: "Grab Interest",
-    para: "Say something interesting about your business here.",
+    heading: "Heading",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, molestiae quas et quia quisquam voluptatum eos placeat similique rem. Porro!",
     img: testerImg,
   },
 
   {
     id: 1,
-    heading: "Generate Excitement",
-    para: "What's something exciting your business offers? Say it here.",
+    heading: "Heading",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, molestiae quas et quia quisquam voluptatum eos placeat similique rem. Porro!",
     img: testerImg,
   },
 
   {
     id: 2,
-    heading: "Close the deal",
-    para: "Give customers a reason to do business with you.",
+    heading: "Heading",
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, molestiae quas et quia quisquam voluptatum eos placeat similique rem. Porro!",
     img: testerImg,
   },
 ];

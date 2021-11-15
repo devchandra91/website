@@ -42,6 +42,7 @@ export default class Navigation extends React.Component {
               to="/"
               activeStyle={{
                 borderBottomColor: "#22c55e",
+                borderBottomWidth: "3px",
               }}
             >
               <button className={navigationLinkStyleHome}>
@@ -75,6 +76,7 @@ export default class Navigation extends React.Component {
               to="/contact-us"
               activeStyle={{
                 borderBottomColor: "#22c55e",
+                borderBottomWidth: "3px",
               }}
             >
               <button className={navigationLinkStyleContactUs}>
