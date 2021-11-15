@@ -7,7 +7,7 @@ import { MdSettings } from "react-icons/md";
 import { MdLocalPhone } from "react-icons/md";
 
 let navigationLinkStyle =
-  "text-green-500  text-lg hover:text-green-600 outline-none";
+  "text-green-500 md:text-white md:hover:text-white text-lg hover:text-green-600 outline-none";
 let navigationLinkStyleHome = `${navigationLinkStyle}`;
 let navigationLinkStyleServices = `${navigationLinkStyle}`;
 let navigationLinkStyleContactUs = `${navigationLinkStyle} md:font-semibold`;
@@ -97,7 +97,7 @@ export default class Navigation extends React.Component {
     return (
       <React.Fragment>
         <div
-          className="bg-white relative z-10 shadow-md
+          className=" bg-green-600 relative z-10 shadow-md
                       grid grid-flow-col auto-cols-max 
                       justify-between items-center py-2 font-raleway"
         >
