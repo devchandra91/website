@@ -2,7 +2,7 @@
   "name": "stackrwd",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://devchandra91.github.io/",
+  "homepage": "http://devchandra91.github.io/website",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@tailwindcss/typography": "^0.4.1",
